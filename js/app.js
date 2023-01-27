@@ -36,6 +36,52 @@ function func4(){
     popup.removeChild(menu2);
     popup.removeChild(socials);
 }
+addEventListener("resize", func5);
+
+//<------------------------------------------------->
+if(document.body.clientWidth <= 1000){
+    document.querySelector(".aboutus__more").textContent = "Читать подробнее";
+}
+else{
+    document.querySelector(".aboutus__more").textContent = "Подробнее";
+}
+
+const aboutus__more1 = document.querySelector(".aboutus__more").cloneNode(1);
+document.querySelector(".aboutus__container").insertBefore(aboutus__more1, document.querySelector(".aboutus__container").firstChild);
+
+
+
+if(document.body.clientWidth <= 768){
+    document.querySelector(".aboutus__description").textContent = "Описание может быть любое. Более 5 лет мы проводим курсы сертифицированные курсы профессионального образования в области косметологии и индустрии красоты, здоровья и молодости";
+    document.querySelectorAll(".aboutus__more")[1].style.display = "none";
+    aboutus__more1.style.display = "block";
+}
+else{
+    document.querySelectorAll(".aboutus__more")[1].style.display = "block";
+    aboutus__more1.style.display = "none";
+}
+
+//<------------------------------------------------->
+
+function func5(){
+    if(document.body.clientWidth <= 1000){
+        document.querySelector(".aboutus__more").textContent = "Читать подробнее";
+    }
+    else{
+        document.querySelector(".aboutus__more").textContent = "Подробнее";
+    }
+
+    if(document.body.clientWidth <= 768){
+        document.querySelector(".aboutus__description").textContent = "Описание может быть любое. Более 5 лет мы проводим курсы сертифицированные курсы профессионального образования в области косметологии и индустрии красоты, здоровья и молодости";
+        document.querySelectorAll(".aboutus__more")[1].style.display = "none";
+        aboutus__more1.style.display = "block";
+    }
+    else{
+        document.querySelector(".aboutus__description").textContent = "Описание может быть любое. Ведущий учебный центр эстетической косметологии. Более 5 лет мы проводим курсы сертифицированные курсы профессионального образования в области косметологии и индустрии красоты, здоровья и молодости";
+        document.querySelectorAll(".aboutus__more")[1].style.display = "block";
+        aboutus__more1.style.display = "none";
+    }
+}
 
 $(".courses__slider").slick({
     infinite: true,
@@ -43,7 +89,7 @@ $(".courses__slider").slick({
     slidesToScroll: 1,
     arrows: true,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     responsive: [
         {
@@ -66,4 +112,36 @@ $(".courses__slider").slick({
             }
         }
     ]
+})
+$(".aboutus__slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    variableWidth: true,
+    autoplay: false,
+    autoplaySpeed: 4000,
+    cssEase: 'linear',
+    // responsive: [
+    //     {
+    //     breakpoint: 769,
+    //     settings: {
+    //         slidesToShow: 1,
+    //         arrows: false,
+    //         centerMode: true,
+    //         variableWidth: true,
+            
+    //         }
+    //     },
+    //     {
+    //         breakpoint: 769,
+    //         settings: {
+    //             slidesToShow: 1,
+    //             arrows: false,
+    //             centerMode: true,
+    //             variableWidth: true,
+    //         }
+    //     }
+    // ]
 })
