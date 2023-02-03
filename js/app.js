@@ -82,7 +82,7 @@ function func5(){
         aboutus__more1.style.display = "none";
     }
 }
-
+//<-----------------SLIDERS-------------------------------->
 $(".courses__slider").slick({
     infinite: true,
     slidesToShow: 3,
@@ -120,7 +120,7 @@ $(".aboutus__slider").slick({
     arrows: false,
     dots: false,
     variableWidth: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     cssEase: 'linear',
     // responsive: [
@@ -145,3 +145,42 @@ $(".aboutus__slider").slick({
     //     }
     // ]
 })
+//<-----------------Scroll-Animation-------------------------------->
+const animItems = document.querySelectorAll(".anim-items");
+
+if(animItems.length > 0){
+    window.addEventListener("scroll", animOnScroll);
+    function animOnScroll(params){
+        for(let i = 0; i < animItems.length; i++){
+            const animItem = animItems[i];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            console.log(scrollY);
+            if(animItemHeight > window.innerHeight){
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if((scrollY > animItemOffset - animItemPoint) &&(scrollY < (animItemOffset + animItemHeight))){
+                animItem.classList.add("anim-active");
+            }
+            else{
+                if(!animItem.classList.contains("anim-no-hide")){
+                    animItem.classList.remove("anim-active");
+                }
+            }
+        }
+    }
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft}
+    }
+    setTimeout(() => {
+        animOnScroll();
+    }, 300);
+    
+}
