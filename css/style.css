@@ -2182,7 +2182,7 @@ main .slick-prev:active {
   transition: 0.2s linear;
   transition-property: all;
   flex: 0 1 47.5%;
-  background: url(/images/mainpage/education/ibg1.png) 100% no-repeat;
+  background: url(images/mainpage/education/ibg1.png) 100% no-repeat;
   background-size: cover;
   padding: 35px 30px 30px 30px;
 }
@@ -2207,7 +2207,7 @@ main .slick-prev:active {
   transition: 0.2s linear;
   transition-property: all;
   flex: 0 1 47.5%;
-  background: url(/images/mainpage/education/ibg2.png) 100% no-repeat;
+  background: url(images/mainpage/education/ibg2.png) 100% no-repeat;
   background-size: cover;
   padding: 35px 30px 30px 30px;
 }
@@ -2232,7 +2232,7 @@ main .slick-prev:active {
   transition: 0.2s linear;
   transition-property: all;
   flex: 0 1 30%;
-  background: url(/images/mainpage/education/ibg3.png) 100% no-repeat;
+  background: url(images/mainpage/education/ibg3.png) 100% no-repeat;
   background-size: cover;
   padding: 22px 26px 25px 28px;
 }
@@ -2255,7 +2255,7 @@ main .slick-prev:active {
   transition: 0.2s linear;
   transition-property: all;
   flex: 0 1 30%;
-  background: url(/images/mainpage/education/ibg4.png) 100% no-repeat;
+  background: url(images/mainpage/education/ibg4.png) 100% no-repeat;
   background-size: cover;
   padding: 22px 26px 25px 28px;
   display: flex;
@@ -2279,7 +2279,7 @@ main .slick-prev:active {
   transition: 0.2s linear;
   transition-property: all;
   flex: 0 1 30%;
-  background: url(/images/mainpage/education/ibg5.png) 100% no-repeat;
+  background: url(images/mainpage/education/ibg5.png) 100% no-repeat;
   background-size: cover;
   padding: 22px 26px 25px 28px;
 }
